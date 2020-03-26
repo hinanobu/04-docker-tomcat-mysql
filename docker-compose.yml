@@ -15,7 +15,7 @@ services:
       - 3306:3306
 
   app:
-    image: tomcat:8.5.51-jdk8-openjdk
+    build: ./docker/tomcat
     container_name: myapp
     volumes:
       - ./webapps:/usr/local/tomcat/webapps
